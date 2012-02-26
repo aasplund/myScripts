@@ -1,0 +1,27 @@
+#Set up the path, add frameworks to the path
+export PATH=$PATH:./:~/scripts
+
+#Add dev frameworks
+#export PATH=$PATH:$ANT_HOME/bin
+export PATH=$PATH:$M2_HOME/bin
+export PATH=$PATH:$GROOVY_HOME/bin
+export PATH=$PATH:$GRAILS_HOME/bin
+export PATH=$PATH:$GRADLE_HOME/bin
+export PATH=$PATH:$GLU_HOME/bin
+export PATH=$PATH:$ZOOKEEPER_HOME/bin
+
+# Dev
+export PATH=$PATH:$TOMCAT_HOME/bin
+export PATH=$PATH:/Applications/dev/mvnsh/bin
+export PATH=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Commands:$PATH
+
+#MacPorts
+export PATH=/opt/local/bin:$PATH
+export PATH=/opt/local/sbin:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH
+
+#Brew
+export PATH=/usr/local/sbin:$PATH
+
+#Git Bookmarking
+#export PATH=~/Documents/Code/Code_and_Docs/Git/gitmarks_git:$PATH

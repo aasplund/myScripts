@@ -1,0 +1,10 @@
+
+opts="-ar --update"
+for f in $(cat sync-file-list)
+do
+  [ -f ~/$f -o -d ~/$f ] && rsync $opts ~/$f ./$f
+done
+rsync $opt --files-from=sync-file-list . ~/
+
+
+
