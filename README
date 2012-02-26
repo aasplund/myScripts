@@ -15,3 +15,6 @@ ln -s ~/.shellscripts/.zprofile ~/.zprofile
 ln -s ~/.shellscripts/.zsh ~/.zsh
 ln -s ~/.shellscripts/.zshenv ~/.zshenv
 ln -s ~/.shellscripts/.zshrc ~/.zshrc
+
+h2. TIP
+Check-out the config files in your Dropbox folder and you will be able to share the configuration between multiple computers.
