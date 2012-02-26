@@ -1,0 +1,17 @@
+h2. Setup
+Create the following symlinks in your home directory.
+Make sure to backup any existing files before incase you want to keep your existing configurations.
+
+ln -s .shellscripts ~/.shellscripts
+ln -s oh-my-zsh ~/.oh-my-zsh
+ln -s ~/.shellscripts/.bash_gitprompt ~/.bash_gitprompt
+ln -s ~/.shellscripts/.bash_profile ~/.bash_profile
+ln -s ~/.shellscripts/.bashrc ~/.bashrc
+ln -s ~/.shellscripts/.profile ~/.profile
+ln -s ~/.shellscripts/.shellaliases ~/.shellaliases
+ln -s ~/.shellscripts/.shellpaths ~/.shellpaths
+ln -s ~/.shellscripts/.shellvars ~/.shellvars
+ln -s ~/.shellscripts/.zprofile ~/.zprofile
+ln -s ~/.shellscripts/.zsh ~/.zsh
+ln -s ~/.shellscripts/.zshenv ~/.zshenv
+ln -s ~/.shellscripts/.zshrc ~/.zshrc
