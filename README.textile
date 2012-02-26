@@ -10,8 +10,8 @@ h2. Setup
 Create the following symlinks in your home directory.
 Make sure to backup any existing files before incase you want to keep your existing configurations.
 
-bq. ln -s .shellscripts ~/.shellscripts
-ln -s oh-my-zsh ~/.oh-my-zsh
+bq. ln -s `pwd`/.shellscripts ~/.shellscripts
+ln -s `pwd`/oh-my-zsh ~/.oh-my-zsh
 ln -s ~/.shellscripts/.bash_gitprompt ~/.bash_gitprompt
 ln -s ~/.shellscripts/.bash_profile ~/.bash_profile
 ln -s ~/.shellscripts/.bashrc ~/.bashrc
