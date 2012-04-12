@@ -13,10 +13,10 @@ alias to.downloads='cd ${MYDOWNLOADS}'
 alias to.docs='cd ${MYDOCUMENTS}'
 #alias to.clients='cd ~/Documents/Clients'
 alias to.code='cd ${MYCODE}'
-alias to.code.opensource='cd ${MYCODE}/OpenSource'
+#alias to.code.opensource='cd ${MYCODE}/OpenSource'
 #alias to.scratch='cd ${MYSCRATCH}'
 #alias to.teach='cd ${MYTEACH}'
-alias to.code.lab='cd ${MYCODE}/lab'
+#alias to.code.lab='cd ${MYCODE}/lab'
 
 
 #alias to.courses='cd ${MYCOURSES}'

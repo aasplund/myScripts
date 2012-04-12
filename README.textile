@@ -8,7 +8,7 @@ bq. git clone ==--==recursive git://github.com/aasplund/myScripts.git
 h2. Setup
 
 Create the following symlinks in your home directory.
-Make sure to backup any existing files before incase you want to keep your existing configurations.
+Make sure to backup any existing files before in case you want to keep your existing configurations.
 
 bq. ln -s `pwd`/.shellscripts ~/.shellscripts
 ln -s `pwd`/oh-my-zsh ~/.oh-my-zsh
@@ -26,4 +26,4 @@ ln -s ~/.shellscripts/.zshrc ~/.zshrc
 
 h2. TIP
 
-Check-out the config files in your Dropbox folder and you will be able to share the configuration between multiple computers.
+Check out the config files in your Dropbox folder and you will be able to share the configuration between multiple computers.
