@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #All scripts in processed in the this script
-scripts=(.bash_gitprompt .bash_profile .bashrc .profile .shellaliases .shellpaths .shellvars .zprofile .zsh .zshenv .zshrc)
+scripts=(.profile .shellaliases .shellpaths .shellvars .zprofile .zsh .zshenv .zshrc)
 
 setup_symlinks() {
 
