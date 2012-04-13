@@ -9,18 +9,16 @@ setup_symlinks() {
 	while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
 	CURRENT_PATH="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-#Adding link to oh-my-zsh	
+#Creating symlink to oh-my-zsh in $HOME
 	ln -sfv $CURRENT_PATH/".oh-my-zsh" $HOME
 	
-#Adding links to scriptfolder and all of its containg scripts
-	SCRIPT_FOLDER_NAME=".shellscripts"
-	ln -sfv $CURRENT_PATH/$SCRIPT_FOLDER_NAME $HOME
+#Creating symlinks to all of the scripts in $HOME
 	for script in ${scripts[@]}
 	do
-		ln -svf $SCRIPT_FOLDER_NAME/$script $HOME 
+		ln -svf $CURRENT_PATH/.shellscripts/$script $HOME 
 	done
 
-#Adding link to project in Dropbox
+#Creating symlink to project in Dropbox
 	if [ -d $HOME/Dropbox ]
 	then
 		ln -sfv $CURRENT_PATH $HOME/Dropbox
