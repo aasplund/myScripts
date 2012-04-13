@@ -11,7 +11,7 @@ h2. Setup
 
 Run the setup.sh script. 
 
-@sh setup.sh@
-h2. TIP
+bq. sh setup.sh
 
-Create a symlink in your Dropbox folder to the project and you will be able to share the configuration between multiple computers.
+The script will create symlinks in you home catalog to all the script files provided in _myScripts_. If Dropbox is installed the script will also create a symlink to the project in the Dropbox folder (works only if Dropbox is installed on the default path i.e $HOME/Dropbox).
+ 

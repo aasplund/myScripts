@@ -1,65 +1,32 @@
 #! /bin/bash
 
 setup_symlinks() {
+	scripts=(.bash_gitprompt .bash_profile .bashrc .profile .shellaliases .shellpaths .shellvars .zprofile .zsh .zshenv .zshrc)
+
 	SOURCE="${BASH_SOURCE[0]}"
 	while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
-
+	CURRENT_PATH="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+	
+	
 	SS_NAME=".shellscripts"
-	SS_PATH="$( cd -P "$( dirname "$SOURCE" )" && pwd )"/$SS_NAME
-	echo Creating symlink to $SS_PATH in $HOME
-	ln -sf $SS_PATH $HOME/$SS_NAME
+	ln -sfv $CURRENT_PATH/$SS_NAME $HOME
 
 	OMZ_NAME="oh-my-zsh"
-	OMZ_PATH="$( cd -P "$( dirname "$SOURCE" )" && pwd )"/$OMZ_NAME
-	echo Creating symlink to $OMZ_PATH in $HOME
-	ln -sf $OMZ_PATH $HOME/.$OMZ_NAME
+	ln -sfv $CURRENT_PATH/$OMZ_NAME $HOME
+	rm -f $HOME/.$OMZ_NAME
+	mv -fv $HOME/$OMZ_NAME $HOME/.$OMZ_NAME
+
+	for script in ${scripts[@]}
+	do
+		ln -svf $SS_NAME/$script $HOME 
+	done
 
 
-	SCRIPT_NAME=".bash_gitprompt"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $HOME/$SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".bash_profile"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $HOME/$SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".bashrc"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".profile"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".shellaliases"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".shellpaths"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".shellvars"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".zprofile"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".zsh"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".zshenv"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
-
-	SCRIPT_NAME=".zshrc"
-	echo Creating symlink to $HOME/$SS_NAME/$SCRIPT_NAME in $HOME
-	ln -sf $SS_NAME/$SCRIPT_NAME $HOME/$SCRIPT_NAME
+	if [ -d $HOME/Dropbox ]
+	then
+		ln -sfv $CURRENT_PATH $HOME/Dropbox
+	fi
 }
-
 
 echo "
 
