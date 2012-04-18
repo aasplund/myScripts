@@ -28,4 +28,5 @@ export GRAILS_HOME=$MYDEVAPPS/grails
 export GLU_HOME=$MYDEVAPPS/glu
 export ZOOKEEPER_HOME=$MYDEVAPPS/zookeeper
 export TOMCAT_HOME=$MYDEVAPPS/tomcat
+export SCALA_HOME=$MYDEVAPPS/scala
 export PLAY_HOME=$MYDEVAPPS/play

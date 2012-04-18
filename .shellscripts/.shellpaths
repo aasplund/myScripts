@@ -10,6 +10,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
 export PATH=$PATH:$GLU_HOME/bin
 export PATH=$PATH:$ZOOKEEPER_HOME/bin
 export PATH=$PATH:$PLAY_HOME
+export PATH=$PATH:$SCALA_HOME/bin
 
 # Dev
 export PATH=$PATH:$TOMCAT_HOME/bin
