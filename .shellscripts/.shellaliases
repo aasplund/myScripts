@@ -9,23 +9,8 @@ alias run.jetty='cd /Applications/Dev/jetty-6.1.9;java -jar start.jar etc/jetty.
 # Commands to change dirs
 alias to.temp='cd ${MYTEMP}'
 alias to.downloads='cd ${MYDOWNLOADS}'
-#alias to.process='cd ${MYPROCESS}'
 alias to.docs='cd ${MYDOCUMENTS}'
-#alias to.clients='cd ~/Documents/Clients'
 alias to.code='cd ${MYCODE}'
-#alias to.code.opensource='cd ${MYCODE}/OpenSource'
-#alias to.scratch='cd ${MYSCRATCH}'
-#alias to.teach='cd ${MYTEACH}'
-#alias to.code.lab='cd ${MYCODE}/lab'
-
-
-#alias to.courses='cd ${MYCOURSES}'
-#alias to.courses.maven2='cd ${MYCOURSES}/Mastering-Maven-2.0/examples'
-#alias to.courses.maven3='cd ${MYCOURSES}/Mastering-Maven-3.0/examples_git'
-#alias to.courses.git='cd ${MYCOURSES}/Git-Going/examples_git'
-
-#alias to.reference='cd ~/Documents/Code/Reference'
-#alias to.devapps='cd ${MYDEVAPPS}'
 
 alias vi=vim
 alias dnsflush='dscacheutil -flushcache'
@@ -46,8 +31,10 @@ alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v
 # -l Long format
 # -h Short size suffixes (B, K, M, G, P)
 # -p Postpend slash to folders
-alias ls='ls -Ghp '
-alias ll='ls -lGhp '
+alias   l='ls -F'
+alias  ll='ls -F -lh'
+alias  la='ls -F        -a'
+alias lla='ls -F -lh    -a'
 
 # Maven aliases
 alias mvni='mvn clean install'
@@ -55,3 +42,4 @@ alias mvne='mvn eclipse:eclipse'
 alias mvnp='mvn clean package'
 alias mvnt='mvn clean test'
 
+alias pcat="pygmentize -f terminal256 -O style=native -g"

@@ -25,7 +25,7 @@ ZSH_THEME="gozilla"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autojump compleat history-substring-search svn textmate brew zsh-syntax-highlighting)
+plugins=(git git-extras autojump compleat history-substring-search svn zsh-syntax-highlighting sublime scala colored-man brew)
 
 source $ZSH/oh-my-zsh.sh
 
