@@ -15,19 +15,19 @@ export PATH=$PATH:$CASSANDRA_HOME/bin
 export PATH=$PATH:$MONGODB_HOME/bin
 export PATH=$PATH:$ACTIVEMQ_HOME/bin
 export PATH=$PATH:$SBT_HOME/bin
-export PATH=$PATH:$MAVEN_HOME/bin
 export PATH=$PATH:$DERBY_HOME/bin
 export PATH=$PATH:$BEES_HOME
 export PATH=$GIT_HOME/bin:$PATH
 
 # Dev
 export PATH=$PATH:$TOMCAT_HOME/bin
-export PATH=$PATH:/Applications/dev/mvnsh/bin
-#export PATH=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Commands:$PATH
 export PATH=${JAVA_HOME}/bin:$PATH
 
 #Brew
 export PATH=/usr/local/sbin:$PATH
+
+#My Own
+#export PATH=~/bin:$PATH
 
 #Git Bookmarking
 #export PATH=~/Documents/Code/Code_and_Docs/Git/gitmarks_git:$PATH

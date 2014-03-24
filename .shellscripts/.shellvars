@@ -6,32 +6,20 @@ export MYCODE=~/src
 export MYDOWNLOADS=~/Downloads
 export MYDOCUMENTS=~/Documents
 export MYDEVAPPS=/Applications/dev
+export BREW_HOME=/usr/local/Cellar
 
 
 #########################################################################
 # Tool paths
-export GRADLE_HOME=$MYDEVAPPS/gradle
 export JAVA_HOME=$(/usr/libexec/java_home)
-export ANDROID_HOME=$MYDEVAPPS/android-sdk-mac_86
-export GROOVY_HOME=$MYDEVAPPS/groovy
-export GRAILS_HOME=$MYDEVAPPS/grails
-export GLU_HOME=$MYDEVAPPS/glu
-export ZOOKEEPER_HOME=$MYDEVAPPS/zookeeper
-export TOMCAT_HOME=$MYDEVAPPS/tomcat
-export SCALA_HOME=$MYDEVAPPS/scala
-export PLAY_HOME=$MYDEVAPPS/play
-export CASSANDRA_HOME=$MYDEVAPPS/cassandra
-export MONGODB_HOME=$MYDEVAPPS/mongodb
-export SBT_HOME=$MYDEVAPPS/sbt
-export ACTIVEMQ_HOME=$MYDEVAPPS/activemq
-export MAVEN_HOME=/usr/share/maven
-export DERBY_HOME=/$MYDEVAPPS/derby
+export SCALA_HOME=$BREW_HOME/scala/2.10.3
+export ACTIVEMQ_HOME=$BREW_HOME/activemq/5.9.0/libexec
+export M2_HOME=$BREW_HOME/maven/3.2.1/libexec
+export M2=$M2_HOME/bin
 export JREBEL_HOME=$MYDEVAPPS/jrebel
-export JETTY_HOME=$MYDEVAPPS/jetty
-export BEES_HOME=$MYDEVAPPS/cloudbees-sdk-1.3.1
-export GIT_HOME=/usr/local/git
+export GIT_HOME=$BREW_HOME/git/1.9.0/libexec
 
-export SVN_EDITOR=vim
+export SVN_EDITOR=subl
 
 
 ##########################################################################

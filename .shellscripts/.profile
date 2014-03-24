@@ -6,7 +6,7 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 #Set textmate as our default command line editor (vi is the default otherwise)
-export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -w'
+export EDITOR='subl -w'
 
 source ~/.shellvars
 source ~/.shellpaths

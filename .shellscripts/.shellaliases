@@ -1,10 +1,5 @@
 # Commands to run apps
 alias run.jetty='cd /Applications/Dev/jetty-6.1.9;java -jar start.jar etc/jetty.xml'
-#alias run.jmeter='${JMETER_HOME}/bin/jperf.sh'
-#alias run.nexus='nexus start'
-#alias run.clojure.repl='java -cp ${CLOJURE_HOME}/clojure.jar clojure.lang.Repl'
-#alias run.jlineclojure.repl='java -cp ${CLOJURE_HOME}/jline-0.9.91.jar:${CLOJURE_HOME}/clojure.jar jline.ConsoleRunner clojure.lang.Repl'
-#alias run.clojure.script='java -cp ${CLOJURE_HOME}/clojure.jar clojure.main'
 
 # Commands to change dirs
 alias to.temp='cd ${MYTEMP}'
@@ -21,8 +16,10 @@ alias network.established='lsof -l -i +L -R -V | grep ESTABLISHED'
 
 # Files used, anywhere on the filesystem
 alias files.usage='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep'
+
 # Files being opened
 alias files.open='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep open'
+
 # Files in use in the Users directory
 alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v grep|grep Users'
 
@@ -31,10 +28,10 @@ alias files.usage.user='sudo fs_usage -e -f filesystem|grep -v CACHE_HIT|grep -v
 # -l Long format
 # -h Short size suffixes (B, K, M, G, P)
 # -p Postpend slash to folders
-alias   l='ls -F'
-alias  ll='ls -F -lh'
-alias  la='ls -F        -a'
-alias lla='ls -F -lh    -a'
+#alias   l='ls -F'
+#alias  ll='ls -F -lh'
+#alias  la='ls -F        -a'
+#alias lla='ls -F -lh    -a'
 
 # Maven aliases
 alias mvni='mvn clean install'
