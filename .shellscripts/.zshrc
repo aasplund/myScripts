@@ -1,3 +1,5 @@
+source .zprofile
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -8,7 +10,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="fino"
 
 # Set to this to use case-sensitive completion
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
