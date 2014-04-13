@@ -18,6 +18,7 @@ export M2_HOME=$BREW_HOME/maven/3.2.1/libexec
 export M2=$M2_HOME/bin
 export JREBEL_HOME=$MYDEVAPPS/jrebel
 export GIT_HOME=$BREW_HOME/git/1.9.0/libexec
+export GRADLE_HOME=$BREW_HOME/gradle/1.11/libexec
 
 export SVN_EDITOR=subl
 
