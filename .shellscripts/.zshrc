@@ -26,15 +26,21 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(dircycle autojump git gitfast git-extras compleat osx history-substring-search svn zsh-syntax-highlighting sublime sbt scala colored-man brew)
+plugins=(dircycle autojump git gitfast git-extras compleat osx history-substring-search svn zsh-syntax-highlighting sublime sbt scala colored-man brew docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.iterm2_shell_integration.zsh
 
 # Customize to your needs...
 # xxx
+ulimit -S -n 4096
 
 function ff { osascript -e 'tell application "Finder"'\
  -e "if (${1-1} <= (count Finder windows)) then"\
  -e "get POSIX path of (target of window ${1-1} as alias)"\
  -e 'else' -e 'get POSIX path of (desktop as alias)'\
  -e 'end if' -e 'end tell'; };\
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/anders/.sdkman"
+[[ -s "/Users/anders/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/anders/.sdkman/bin/sdkman-init.sh"

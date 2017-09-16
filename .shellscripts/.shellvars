@@ -6,25 +6,32 @@ export MYCODE=~/src
 export MYDOWNLOADS=~/Downloads
 export MYDOCUMENTS=~/Documents
 export MYDEVAPPS=/Applications/dev
-export BREW_HOME=/usr/local/Cellar
+export BREW_HOME=/usr/local
 
-
-#########################################################################
+########################################################################
 # Tool paths
-export JAVA_HOME=$(/usr/libexec/java_home)
-export SCALA_HOME=$BREW_HOME/scala/2.10.3
-export ACTIVEMQ_HOME=$BREW_HOME/activemq/5.9.0/libexec
-export M2_HOME=$BREW_HOME/maven/3.2.1/libexec
-export M2=$M2_HOME/bin
-export JREBEL_HOME=$MYDEVAPPS/jrebel
-export GIT_HOME=$BREW_HOME/git/1.9.0/libexec
-export GRADLE_HOME=$BREW_HOME/gradle/1.11/libexec
+export SCALA_HOME=/usr/local/opt/scala/idea
+#export ACTIVEMQ_HOME=$BREW_HOME/activemq/libexec
+export GROOVY_HOMEP=$BREW_HOME/groovy/libexec
+export GIT_HOME=$BREW_HOME/git/libexec
+#export GRADLE_HOME=$BREW_HOME/gradle/libexec
+export CONNECT_IQ_HOME=$MYDEVAPPS/connectiq-sdk
+
 
 export SVN_EDITOR=subl
+export PIP_REQUIRE_VIRTUALENV=true
 
+gpip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
 
 ##########################################################################
 # Tool opts
-export JREBEL_OPTS="-javaagent:$JREBEL_HOME/jrebel.jar -Drebel.log.file=/Users/anders/.jrebel/jrebel.log -Drebel.properties=/Users/anders/.jrebel/jrebel.properties -Drebel.spring_plugin=true -Xrunjdwp:transport=dt_socket,address=8001,server=y,suspend=n -Drebel.debugger_integration=true -Drebel.notification.url=http://127.0.0.1:59378/jrebel/notifications"
+#export JREBEL_OPTS="-javaagent:$JREBEL_HOME/jrebel.jar -Drebel.log.file=/Users/anders/.jrebel/jrebel.log -Drebel.properties=/Users/anders/.jrebel/jrebel.properties -Drebel.spring_plugin=true -Xrunjdwp:transport=dt_socket,address=8001,server=y,suspend=n -Drebel.debugger_integration=true -Drebel.notification.url=http://127.0.0.1:59378/jrebel/notifications"
 
-export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m -XX:+CMSClassUnloadingEnabled -XX:+UseCompressedOops -Djava.awt.headless=true"
+#export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m -XX:+CMSClassUnloadingEnabled -XX:+UseCompressedOops -Djava.awt.headless=true -javaagent:/Applications/jrebel/jrebel.jar"
+# -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
+
+#export SBT_OPTS="-XX:PermSize=128M -XX:MaxPermSize=256M"
+
+export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:+CMSClassUnloadingEnabled -XX:+UseCompressedOops -Djava.awt.headless=true"

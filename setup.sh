@@ -7,8 +7,8 @@ setup_symlinks() {
 
 	SOURCE="${BASH_SOURCE[0]}"
 	while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
-	CURRENT_PATH="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
-
+	#CURRENT_PATH="$( cd -P "$( dirname "$SOURCE" )" && pwd)"
+	CURRENT_PATH="/Users/anders/Dropbox/myScripts"
 #Creating symlink to oh-my-zsh in $HOME
 	ln -sfv $CURRENT_PATH/".oh-my-zsh" $HOME
 	
@@ -19,10 +19,10 @@ setup_symlinks() {
 	done
 
 #Creating symlink to project in Dropbox
-	if [ -d $HOME/Dropbox ]
-	then
-		ln -sfv $CURRENT_PATH $HOME/Dropbox
-	fi
+	# if [ -L $HOME/Dropbox ]
+	# then
+	# 	ln -sfv $CURRENT_PATH $HOME/Dropbox
+	# fi
 }
 echo "
 
